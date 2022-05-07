@@ -1,0 +1,179 @@
+@code_G: #25ab5f;
+@passLinerGradient: linear-gradient(45deg,  #548eef,#6cce95);
+@glPadding:.75rem;
+
+.dbc_flex_col() {
+  display: flex;
+  flex-direction: column;
+}
+
+.bgGreen {
+  z-index: -999;
+  position: absolute;
+  top: 0;
+  height: 200px;
+  width: 100%;
+  background: @code_G;
+}
+
+.cardBox() {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.45);
+  min-height: 50px;
+  width: 90vw;
+  box-sizing: border-box;
+}
+
+
+.mainBox {
+  .dbc_flex_col();
+  align-items: center;
+  gap:1rem;
+  // 我們所見的時間
+  .mainCard {
+    // 大小
+    // 边距
+    .cardBox();
+    // 样式
+    .dbc_flex_col();
+    margin-top: 1rem;
+    align-items: center;
+    padding: 1rem;
+
+    .datePart {
+      margin-top: 1rem;
+      color: #25ab5f;
+      font-size: 2rem;
+    }
+    .timePart {
+      color: #25ab5f;
+      font-size: 3rem;
+    }
+
+    .codePart{
+      border-top: 1px solid #ccc;
+      width: 100%;
+      min-height: 100px;
+      margin-top: 1rem;
+      align-items: center;
+      gap:4px;
+      // 定位
+      background-repeat: no-repeat;
+      background-position: 100% 6%;
+      background-size: 4rem;
+
+      .jumpTitle{
+        color:#5194db;
+        font-size: 14px;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .timeCard{
+    height:100%;
+    .cardBox();
+    display: flex;
+    padding: @glPadding;
+
+    // 
+    .testPart,.gogoCard{
+      flex: 1;
+      min-height: 50px;
+    }
+
+    .line{
+      height: 100px;
+      width: 1px;
+      background:rgba(0, 0, 0, 0.45);
+      margin: auto 24px;
+    }
+
+    .testPart{
+      .dbc_flex_col();
+      align-items: center;
+      gap:6px;
+      border-radius: 12px;
+      padding-top: @glPadding;
+      padding-bottom: @glPadding;
+      background: @passLinerGradient;
+      color:#FFF;
+     
+      
+      .testBtn{
+        border-radius: 12px;
+        border: 1px solid #fff;
+        padding: 2px 8px;
+        .icon {
+          display: inline-block;
+          border-radius: 100%;
+          background: #FFF;
+          color: #548eef;
+          margin-left: 8px;
+          width:16px;
+          line-height:16px;
+          height: 16px;
+          text-align: center;
+        }
+      }
+    }
+
+    .gogoCard{
+
+      p:nth-child(2){
+        margin: 0;
+        transform: translate(5px,4px);
+      }
+      p:nth-child(3){
+        margin-top: 18px;
+        text-align: center;
+        color:rgba(0, 0, 0, 0.65);
+        font-size: 14px;
+      }
+    }
+    
+  }
+
+  // 形成卡详情
+  .routeCard{
+    .cardBox();
+    display: flex;
+    padding: @glPadding;
+
+    // 展示文字
+    div:nth-child(1){
+      flex: 6;
+
+      p{
+        margin: 0;
+      }
+      //
+      p:nth-child(1){
+        color:rgba(0, 0, 0, 0.65);
+        margin-bottom: 4px;
+      }
+      p:nth-child(2){
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.45);
+      }
+    }
+
+    // 按钮
+    div:nth-child(2){
+      flex:3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span{
+        width: 80%;
+        height: 1.5rem;
+        border-radius: 12px;
+        border: 2px solid #548eef;
+        color:#548eef;
+        text-align: center;
+      }
+    }
+  }
+
+}
