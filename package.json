@@ -12,6 +12,7 @@
     "lint": "npm run eslint && npm run stylelint"
   },
   "dependencies": {
+    "@alifd/meet": "^2.7.1",
     "ahooks": "^3.3.10",
     "rax": "^1.1.0",
     "rax-document": "^0.1.0",
@@ -21,11 +22,12 @@
     "rax-view": "^2.0.0"
   },
   "devDependencies": {
-    "rax-app": "^3.8.7",
     "@iceworks/spec": "^1.0.0",
     "@types/rax": "^1.0.0",
+    "build-plugin-fusion-mobile": "^1.1.1",
     "eslint": "^8.0.0",
     "prettier": "^2.1.2",
+    "rax-app": "^3.8.7",
     "stylelint": "^13.7.2"
   },
   "private": true,

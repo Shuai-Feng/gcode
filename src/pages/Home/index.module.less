@@ -27,6 +27,7 @@
 
 
 .mainBox {
+  font-family: PingFangSC,PingFangSC-Regular;
   .dbc_flex_col();
   align-items: center;
   gap:1rem;
@@ -45,10 +46,12 @@
       margin-top: 1rem;
       color: #25ab5f;
       font-size: 2rem;
+ 
     }
     .timePart {
       color: #25ab5f;
       font-size: 3rem;
+      font-family: PingFangSC,PingFangSC-Regular;
     }
 
     .codePart{
@@ -93,40 +96,71 @@
     .testPart{
       .dbc_flex_col();
       align-items: center;
-      gap:6px;
-      border-radius: 12px;
+      gap:0.4rem;
+      border-radius:8px;
       padding-top: @glPadding;
       padding-bottom: @glPadding;
       background: @passLinerGradient;
       color:#FFF;
      
+      section{
+        width: 100%;
+        display: flex;
+        gap: .4rem;
+        div{
+          flex:1;
+        }
+
+        .time{
+          margin-left: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          font-size:2.8rem;
+        }
+
+        .text{
+          align-self: center;
+          span:first-child{
+            font-size: .8rem;
+          }
+          span:last-child{
+            font-size: 1.2rem;
+          }
+        }
+
+        
+      }
+  
       
       .testBtn{
-        border-radius: 12px;
+        border-radius: 10rem;
         border: 1px solid #fff;
-        padding: 2px 8px;
+        box-sizing: content-box;
+        padding: .1rem .6rem;
         .icon {
           display: inline-block;
+          width:.8rem;
+          height:.8rem;
+          text-align: center;
+          line-height: .8rem;
+
           border-radius: 100%;
           background: #FFF;
           color: #548eef;
-          margin-left: 8px;
-          width:16px;
-          line-height:16px;
-          height: 16px;
-          text-align: center;
+        
         }
       }
     }
 
     .gogoCard{
-
+      padding-top: 0.6rem;
       p:nth-child(2){
         margin: 0;
         transform: translate(5px,4px);
       }
       p:nth-child(3){
-        margin-top: 18px;
+        // margin-top: .6rem;
         text-align: center;
         color:rgba(0, 0, 0, 0.65);
         font-size: 14px;

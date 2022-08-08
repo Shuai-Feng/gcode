@@ -5,5 +5,7 @@
     "wechat-miniprogram"
   ],
   "webpack5": true,
-  "plugins": []
+  "plugins": [
+    "build-plugin-fusion-mobile"
+  ]
 }

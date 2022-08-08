@@ -1,7 +1,6 @@
 # rax-materials-basic-app
 
-## Getting Started
-
+## Getting Started 永远绿色的健康码
 ### `npm run start`
 
 Runs the app in development mode.
